@@ -1,0 +1,433 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@300;400;600;700&display=swap');
+
+/* Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Montserrat", sans-serif;
+    background:
+        linear-gradient(135deg,#050505,#151515);
+    color:#ffffff;
+    overflow-x:hidden;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    background:#d50000;
+    text-align:center;
+    padding:35px;
+    transform:skewY(-2deg);
+    box-shadow:0 5px 25px rgba(255,0,0,.4);
+}
+
+header h1{
+    font-family:"Bangers", cursive;
+    font-size:72px;
+    letter-spacing:6px;
+    color:#fff;
+}
+
+header p{
+    margin-top:10px;
+    font-size:20px;
+    font-weight:600;
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+    background:#000;
+    display:flex;
+    justify-content:center;
+    gap:35px;
+    padding:18px;
+    position:sticky;
+    top:0;
+    z-index:999;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:700;
+    transition:.3s;
+    position:relative;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0%;
+    height:3px;
+    background:#ff0000;
+    transition:.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+nav a:hover{
+    color:#ff3b3b;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+
+    background:
+
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.75)),
+
+    radial-gradient(circle at top right,#ff0000 0%,transparent 35%),
+
+    radial-gradient(circle at bottom left,#b80000 0%,transparent 40%),
+
+    repeating-linear-gradient(
+        -35deg,
+        #000 0px,
+        #000 25px,
+        #191919 25px,
+        #191919 50px
+    );
+}
+
+.hero::before{
+
+    content:"";
+    position:absolute;
+
+    width:700px;
+    height:700px;
+
+    background:#ff0000;
+
+    border-radius:45% 55% 60% 40%;
+
+    filter:blur(120px);
+
+    opacity:.18;
+
+    top:-250px;
+    right:-180px;
+}
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:550px;
+    height:550px;
+
+    background:white;
+
+    opacity:.04;
+
+    clip-path:polygon(10% 0,100% 20%,85% 100%,0 80%);
+
+    transform:rotate(-20deg);
+
+    left:-150px;
+    bottom:-100px;
+}
+
+/* ================= HERO TEXT ================= */
+
+.overlay{
+    position:relative;
+    z-index:5;
+    max-width:800px;
+    padding:20px;
+}
+
+.overlay h2{
+    font-family:"Bangers", cursive;
+    font-size:70px;
+    color:#ff2b2b;
+    letter-spacing:5px;
+    text-shadow:5px 5px 0 #000;
+}
+
+.overlay p{
+    margin:25px auto;
+    line-height:1.8;
+    font-size:20px;
+    max-width:700px;
+}
+
+/* ================= BUTTON ================= */
+
+button{
+
+    padding:16px 40px;
+
+    border:3px solid white;
+
+    background:#ff0000;
+
+    color:white;
+
+    font-size:22px;
+
+    font-family:"Bangers", cursive;
+
+    letter-spacing:2px;
+
+    cursor:pointer;
+
+    transform:rotate(-3deg);
+
+    transition:.35s;
+}
+
+button:hover{
+
+    background:white;
+
+    color:black;
+
+    transform:rotate(3deg) scale(1.08);
+
+    box-shadow:0 0 20px red;
+}
+
+/* ================= CONTENT ================= */
+
+.content{
+
+    width:90%;
+    max-width:1100px;
+
+    margin:auto;
+
+    padding:90px 0;
+}
+
+.content h2{
+
+    font-family:"Bangers", cursive;
+
+    font-size:55px;
+
+    color:#ff2a2a;
+
+    margin-bottom:20px;
+
+    letter-spacing:3px;
+}
+
+.content p{
+
+    font-size:18px;
+
+    line-height:1.8;
+}
+
+/* ================= CHARACTER CARDS ================= */
+
+.cards{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+    padding-bottom:80px;
+}
+
+.card{
+
+    background:#171717;
+
+    border-left:8px solid red;
+
+    padding:30px;
+
+    transition:.35s;
+
+    transform:rotate(-2deg);
+
+    box-shadow:0 8px 20px rgba(0,0,0,.4);
+}
+
+.card:nth-child(even){
+    transform:rotate(2deg);
+}
+
+.card:hover{
+
+    background:#d40000;
+
+    transform:scale(1.05);
+
+    box-shadow:0 15px 35px rgba(255,0,0,.5);
+}
+
+.card h3{
+
+    font-family:"Bangers", cursive;
+
+    font-size:35px;
+
+    margin-bottom:15px;
+
+    letter-spacing:2px;
+}
+
+/* ================= GALLERY ================= */
+
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+
+    gap:25px;
+
+    margin-top:40px;
+}
+
+.box{
+
+    height:180px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-family:"Bangers", cursive;
+
+    font-size:30px;
+
+    letter-spacing:2px;
+
+    color:white;
+
+    background:
+        linear-gradient(135deg,#ff0000,#830000);
+
+    transform:rotate(-3deg);
+
+    transition:.35s;
+
+    box-shadow:0 10px 20px rgba(255,0,0,.3);
+}
+
+.box:nth-child(even){
+    transform:rotate(3deg);
+}
+
+.box:hover{
+
+    transform:scale(1.08) rotate(0deg);
+
+    box-shadow:0 15px 35px rgba(255,0,0,.6);
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+
+    background:black;
+
+    text-align:center;
+
+    padding:35px;
+
+    margin-top:80px;
+
+    border-top:4px solid red;
+}
+
+footer h3{
+
+    font-family:"Bangers", cursive;
+
+    font-size:40px;
+
+    letter-spacing:3px;
+
+    margin-bottom:10px;
+}
+
+footer p{
+
+    color:#cccccc;
+}
+
+/* ================= SCROLLBAR ================= */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#ff0000;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#ff4d4d;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+header h1{
+    font-size:52px;
+}
+
+.overlay h2{
+    font-size:48px;
+}
+
+.overlay p{
+    font-size:18px;
+}
+
+.content h2{
+    font-size:42px;
+}
+
+nav{
+    gap:18px;
+    flex-wrap:wrap;
+}
+}
